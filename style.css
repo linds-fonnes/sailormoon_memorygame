@@ -1,0 +1,76 @@
+#game {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+@font-face {
+  src: url(./Shardee.ttf);
+  font-family: "Shardee";
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  font-family: Shardee, sans-serif;
+  background: radial-gradient(#d260ff, #ffb3df);
+}
+
+h1 {
+  color: #ff2e51;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.game-info-container {
+  font-size: 3rem;
+  color: #fff666;
+  grid-column: 1/ -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-info {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.overlay-text {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #5158ff;
+}
+
+#victory-text {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.overlay-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(255, 246, 102, 0);
+    font-size: 0;
+  }
+  to {
+    font-size: 10em;
+    background-color: rgba(255, 246, 102, 0.8);
+  }
+}
